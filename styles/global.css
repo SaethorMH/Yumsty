@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Grenette;
+}
+img {
+  width: 100%;
+}
+:root {
+  --bgColor: #fffcef;
+  --primary: #b1c597;
+  --secondary: #45700e;
+  --tertiary: #e0a041;
+  --black: #222222;
+}
+@font-face {
+  font-family: Grenette;
+  src: url(../fonts/GrenettePro-Regular.ttf);
+}
+@font-face {
+  font-family: GrenetteBold;
+  src: url(../fonts/GrenettePro-Bold.ttf);
+}
+@font-face {
+  font-family: GrenetteSemi;
+  src: url(../fonts/GrenettePro-SemiBold.ttf);
+}
+
+body {
+  background-color: var(--bgColor);
+  color: var(--black);
+}
+
+h1 {
+  font-family: GrenetteBold;
+  text-transform: capitalize;
+}
+
+h2 {
+  font-family: GrenetteSemi;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary);
+}
+nav {
+  display: flex;
+}
+.menu {
+  text-decoration: none;
+  color: var(--black);
+  font-family: GrenetteSemi;
+  font-size: 2rem;
+  padding: 1rem;
+  transition: 0.1s;
+}
+.menu:hover {
+  background-color: var(--secondary);
+  color: var(--bgColor);
+}

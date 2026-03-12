@@ -1,0 +1,28 @@
+#rContainer {
+  display: grid;
+  max-width: 1000px;
+  gap: 20px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+h1 {
+  font-size: 4rem;
+}
+article {
+  max-width: 400px;
+  overflow: hidden;
+  transition: 0.2s;
+  img {
+    transition: 0.5s ease;
+  }
+}
+
+article:hover {
+  cursor: pointer;
+  img {
+    transform: scale(1.05);
+  }
+}
