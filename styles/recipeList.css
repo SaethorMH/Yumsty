@@ -33,4 +33,15 @@ article:hover {
 .pageButton {
   padding: 20px;
   background-color: var(--primary);
+  text-decoration: none;
+  color: var(--black);
+  transition: 0.2s ease;
+}
+.pageButton:hover {
+  background-color: var(--secondary);
+  color: var(--bgColor);
+}
+#pageCounter {
+  place-self: center;
+  margin: 40px;
 }
