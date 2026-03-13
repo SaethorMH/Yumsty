@@ -26,3 +26,11 @@ article:hover {
     transform: scale(1.05);
   }
 }
+
+#buttonContainer {
+  place-self: center;
+}
+.pageButton {
+  padding: 20px;
+  background-color: var(--primary);
+}

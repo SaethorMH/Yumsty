@@ -5,10 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yumsty - </title>
+
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/recipe.css">
+
 </head>
 
 <body>
+    <header>
+        <a href="./index.html"><img src="" alt="LOGO"></a>
 
+        <nav>
+            <!-- <a class="menu" href="./index.html">Front Page</a> -->
+            <a class="menu" href="./recipeList.html">Recipes</a>
+            <a class="menu" href="./discover.html">Discover</a>
+            <a class="menu" href="./contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1 id="rName"></h1>
+        <p id="rating"></p>
+        <div id="imgContainer"></div>
+        <ol id="instructions"></ol>
+        <ul id="ingredients"></ul>
+    </main>
+    <script src="./js/recipe.js"></script>
 </body>
 
 </html>

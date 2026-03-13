@@ -5,19 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yumsty</title>
+
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/index.css">
+
 </head>
 
 <body>
+    <header>
+        <a href="./index.html"><img src="" alt="LOGO"></a>
+
+        <nav>
+            <!-- <a class="menu" href="./index.html">Front Page</a> -->
+            <a class="menu" href="./recipeList.html">Recipes</a>
+            <a class="menu" href="./discover.html">Discover</a>
+            <a class="menu" href="./contact.html">Contact</a>
+        </nav>
+    </header>
 
     <div id="mtContainer">
-        <ul>
-            <a href="./recipeList.html?meal-type=dinner">Dinner</a>
-            <a href="./recipeList.html?meal-type=dinner">Lunch</a>
-            <a href="./recipeList.html?meal-type=breakfast">Breakfast</a>
-            <a href="./recipeList.html?meal-type="></a>
-            <a href=""></a>
-            <a href=""></a>
-        </ul>
+
+        <a href="./recipeList.html?meal-type=dinner&skip=0" class="mt">Dinner</a>
+        <a href="./recipeList.html?meal-type=lunch&skip=0" class="mt">Lunch</a>
+        <a href="./recipeList.html?meal-type=breakfast&skip=0" class="mt">Breakfast</a>
+        <a href="./recipeList.html?meal-type=Snack&skip=0" class="mt">Snack</a>
+        <a href="./recipeList.html?meal-type=beverage&skip=0" class="mt">Beverage</a>
+        <a href="./recipeList.html?meal-type=dessert&skip=0" class="mt">Dessert</a>
+
     </div>
 </body>
 
