@@ -17,6 +17,7 @@ function getData() {
 }
 
 function show(data) {
+  document.title = "Yumsty - " + data.name;
   rName.innerHTML = data.name;
   rating.innerHTML = data.rating + " (" + data.reviewCount + " reviews)";
   imgContainer.innerHTML = `<img src="${data.image}" alt="Image of ${data.name}">`;
