@@ -2,7 +2,7 @@
 
 ### Gruppemedlemmer:
 
-- Nikolai
+- Nicolai
 - Sofie
 - Sæthor
 - Iben
