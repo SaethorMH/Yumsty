@@ -1,0 +1,11 @@
+.slider {
+  display: flex;
+  gap: 20px;
+  height: 25%;
+  overflow: scroll;
+}
+img {
+  height: 15rem;
+  width: 15rem;
+  object-fit: contain;
+}

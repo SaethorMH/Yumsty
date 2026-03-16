@@ -21,7 +21,7 @@ if (mealtype != null && mealtype != "") {
     res.json().then((data) => {
       // console.log(data);
       mealTypeBox.innerHTML = mealtype;
-      document.title = "Yumsty -" + mealtype;
+      document.title = "Yumsty - " + mealtype;
       total = data.total;
       console.log(total);
       makeButtons();

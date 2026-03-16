@@ -29,13 +29,13 @@ function show(data) {
   });
   let i = 0;
   data.ingredients.forEach((ing) => {
-    i++;
     ingredients.innerHTML += `
     
     <input type="checkbox" id="ing${i}">
     <label for="ing${i}" class="ingredient">${ing}</label>
     
     `;
+    i++;
   });
 }
 

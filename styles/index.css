@@ -1,6 +1,8 @@
 #mtContainer {
   display: flex;
   justify-content: space-evenly;
+  wrap: auto;
+  max-width: 90vw;
 }
 
 .mt {
@@ -16,3 +18,25 @@
 .mt:hover {
   background-color: var(--primary);
 }
+
+#hero {
+  display: flex;
+}
+#heroContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.hiContainer img {
+  height: 100%;
+  object-fit: cover;
+}
+/* #hero1 {
+  transform: translate(-100%);
+}
+#hero2 {
+  transform: translate(0%);
+}
+#hero3 {
+  transform: translate(100%);
+} */

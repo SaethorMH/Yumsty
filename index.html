@@ -13,26 +13,78 @@
 
 <body>
     <header>
-        <a href="./index.html"><img src="" alt="LOGO"></a>
+        <a class="logo" href="./index.html"><img src="./Icons/placeholderLOGO.svg" alt="LOGO"></a>
 
         <nav>
-            <!-- <a class="menu" href="./index.html">Front Page</a> -->
-            <a class="menu" href="./recipeList.html">Recipes</a>
-            <a class="menu" href="./discover.html">Discover</a>
-            <a class="menu" href="./contact.html">Contact</a>
+            <ul class="menu">
+                <!-- <a class="menuA" href="./index.html">Front Page</a> -->
+                <a class="menuA" href="./recipeList.html">Recipes</a>
+                <a class="menuA" href="./discover.html">Discover</a>
+                <a class="menuA" href="./contact.html">Contact</a>
+            </ul>
+
+
+
+            <button class="burger">
+                <span class="line"></span><span class="line"></span><span class="line"></span>
+            </button>
         </nav>
     </header>
+    <main>
+        <div id="hero">
+            <div id="hero1" class="heroContainer">
+                <div class="hiContainer">
+                    <img src="https://cdn.dummyjson.com/recipe-images/4.webp" alt="HeroPizza">
+                </div>
+                <div>
+                    <h2>lorem lorem</h2>
+                    <p>Rating rating</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, molestiae culpa. Temporibus illo
+                        placeat at a mollitia quod voluptatibus architecto. Velit, nihil consequatur facilis perferendis
+                        voluptatibus autem corporis modi recusandae!</p>
+                </div>
+            </div>
+            <div id="hero2" class="heroContainer">
+                <div class="hiContainer">
+                    <img src="https://cdn.dummyjson.com/recipe-images/4.webp" alt="HeroPizza">
+                </div>
+                <div class="htContainer">
+                    <h2>lorem lorem</h2>
+                    <p>Rating rating</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, molestiae culpa. Temporibus illo
+                        placeat at a mollitia quod voluptatibus architecto. Velit, nihil consequatur facilis perferendis
+                        voluptatibus autem corporis modi recusandae!</p>
+                </div>
+            </div>
+            <div id="hero3" class="heroContainer">
+                <div class="hiContainer">
+                    <img src="https://cdn.dummyjson.com/recipe-images/4.webp" alt="HeroPizza">
+                </div>
+                <div>
+                    <h2>lorem lorem</h2>
+                    <p>Rating rating</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, molestiae culpa. Temporibus illo
+                        placeat at a mollitia quod voluptatibus architecto. Velit, nihil consequatur facilis perferendis
+                        voluptatibus autem corporis modi recusandae!</p>
+                </div>
+            </div>
 
-    <div id="mtContainer">
+        </div>
+        <div id="mtContainer">
 
-        <a href="./recipeList.html?meal-type=dinner&skip=0" class="mt">Dinner</a>
-        <a href="./recipeList.html?meal-type=lunch&skip=0" class="mt">Lunch</a>
-        <a href="./recipeList.html?meal-type=breakfast&skip=0" class="mt">Breakfast</a>
-        <a href="./recipeList.html?meal-type=Snack&skip=0" class="mt">Snack</a>
-        <a href="./recipeList.html?meal-type=beverage&skip=0" class="mt">Beverage</a>
-        <a href="./recipeList.html?meal-type=dessert&skip=0" class="mt">Dessert</a>
+            <a href="./recipeList.html?meal-type=dinner&skip=0" class="mt">Dinner</a>
+            <a href="./recipeList.html?meal-type=lunch&skip=0" class="mt">Lunch</a>
+            <a href="./recipeList.html?meal-type=breakfast&skip=0" class="mt">Breakfast</a>
+            <a href="./recipeList.html?meal-type=Snack&skip=0" class="mt">Snack</a>
+            <a href="./recipeList.html?meal-type=beverage&skip=0" class="mt">Beverage</a>
+            <a href="./recipeList.html?meal-type=dessert&skip=0" class="mt">Dessert</a>
 
-    </div>
+        </div>
+
+    </main>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
