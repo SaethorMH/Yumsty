@@ -1,35 +1,221 @@
 #mtContainer {
   display: flex;
   justify-content: space-evenly;
-  wrap: auto;
-  max-width: 90vw;
+  flex-wrap: wrap;
+  padding: 2% 10%;
 }
 
 .mt {
   text-decoration: none;
   color: var(--black);
-  width: 100px;
+  width: 12%;
   text-align: center;
-  padding: 40px;
-  background-color: var(--secondary);
+  aspect-ratio: 1/1;
+  background-color: var(--primary);
   font-family: GrenetteSemi;
   font-size: 1.2rem;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+.mt img {
+  height: 100%;
+  width: 100%;
+  filter: invert(0);
+}
+.mt:hover img {
+  height: 100%;
+  width: 100%;
+
+  filter: invert(1) saturate(0);
 }
 .mt:hover {
-  background-color: var(--primary);
+  background-color: var(--secondary);
+  scale: 1.3;
+}
+.mt p {
+  height: 0px;
+  position: relative;
+
+  text-transform: capitalize;
+}
+#allBtn {
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+#allBtn a {
+  font-size: 2rem;
 }
 
-#hero {
+.hero {
+  width: 95vw;
+  height: 85vh;
+  place-self: center;
   display: flex;
+  gap: 4vw;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  transition: all 0.7s;
 }
-#heroContainer {
+.hero::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  list-style-type: none;
+  /* background-color: #eeeeee;
+  border: 1px solid #dddddd; */
+  /* padding: 20px; */
+
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+li:nth-child(even) {
+  background-color: var(--tertiary);
+  scroll-snap-align: center;
+}
+
+.hero::scroll-button(*) {
+  border: 0;
+  border-radius: 50px;
+  font-size: 3.4rem;
+  background-color: black;
+  background-position: 0 50px;
+  color: white;
+  opacity: 0.7;
+  cursor: pointer;
+  line-height: 60%;
+}
+
+.hero::scroll-button(*):hover,
+.hero::scroll-button(*):focus {
+  opacity: 1;
+}
+
+.hero::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+.hero::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+
+.hero::scroll-button(left) {
+  content: "←" / "Previous";
+}
+
+.hero::scroll-button(right) {
+  content: "→" / "Next";
+}
+.hero {
+  anchor-name: --my-carousel;
+}
+
+.hero::scroll-button(*) {
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+.hero::scroll-button(left) {
+  right: calc(anchor(left) - 100px);
+  bottom: calc(anchor(top) - 20%);
+}
+
+.hero::scroll-button(right) {
+  left: calc(anchor(right) - 100px);
+  bottom: calc(anchor(top) - 20%);
+}
+
+/* #hero {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+*/
+.heroContainer {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .hiContainer img {
-  height: 100%;
+  height: 85vh;
+  place-self: center left;
   object-fit: cover;
+  object-position: 0% 50%;
+}
+.htContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto 1fr;
+}
+.htContainer h2 {
+  place-self: end center;
+  font-size: 6rem;
+  text-align: center;
+  max-width: 9ch;
+  hyphens: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.htContainer > p {
+  place-self: center;
+}
+.htContainer p {
+  place-self: start center;
+  max-width: 55ch;
+}
+.htContainer button {
+  place-self: start center;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 50px;
+  margin-top: 10px;
+  padding: 10px;
+  a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2rem;
+  }
+}
+.htContainer button:hover {
+  background-color: var(--secondary);
+  a {
+    color: var(--bgColor);
+  }
+}
+.hero {
+  scroll-marker-group: after;
+}
+.hero::scroll-marker-group {
+  position: absolute;
+  position-anchor: --my-carousel;
+  top: calc(anchor(bottom) - 70px);
+
+  justify-self: anchor-center;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transform: translateX(60px);
+}
+.hero li::scroll-marker {
+  content: attr(data-accName);
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 2px solid #22222244;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: 16px;
+}
+.hero li::scroll-marker:target-current {
+  background-color: #222222aa;
 }
 /* #hero1 {
   transform: translate(-100%);
@@ -40,3 +226,35 @@
 #hero3 {
   transform: translate(100%);
 } */
+
+#aboutContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 25px;
+  place-items: center;
+  place-content: center;
+  background-color: var(--tertiary);
+  padding: 100px 25px;
+}
+#aboutContainer img {
+  place-self: center;
+  width: 50%;
+}
+#aboutText {
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#aboutText > p {
+  max-width: 55ch;
+}
+
+#aboutButton {
+  padding: 10px;
+  margin: auto;
+  place-self: center;
+  a {
+    font-size: 2rem;
+  }
+}

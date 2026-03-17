@@ -26,17 +26,73 @@
 
 
             <button class="burger">
-                <span class="line"></span><span class="line"></span><span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
             </button>
         </nav>
     </header>
     <main>
-        <div id="hero">
+        <ul class="hero">
+            <li data-accName="Item 1" class="heroContainer">
+                <div class="hiContainer">
+                    <img src="https://cdn.dummyjson.com/recipe-images/4.webp" alt="HeroPizza">
+                </div>
+                <div class="htContainer">
+                    <h2>Chicken Alfredo Pasta</h2>
+                    <p>4.9/5</p>
+                    <p>Are you looking for an simple but delicious Chicken Alfredo Pasta?<br>
+                        Try our latest recipe, straight from Italy!</p>
+                    <button><a href="./recipe.html?id=4">See recipe</a></button>
+                </div>
+            </li>
+            <li data-accName="Item 2" class="heroContainer">
+                <div class="hiContainer">
+                    <img src="https://cdn.dummyjson.com/recipe-images/4.webp" alt="HeroPizza">
+                </div>
+                <div class="htContainer">
+                    <h2>lorem lorem</h2>
+                    <p>Rating rating</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, molestiae culpa. Temporibus illo
+                        placeat at a mollitia quod voluptatibus architecto. Velit, nihil consequatur facilis perferendis
+                        voluptatibus autem corporis modi recusandae!</p>
+                    <button><a href="./recipe.html?id=4">See recipe</a></button>
+
+                </div>
+            </li>
+            <li data-accName="Item 3" class="heroContainer">
+                <div class="hiContainer">
+                    <img src="https://cdn.dummyjson.com/recipe-images/4.webp" alt="HeroPizza">
+                </div>
+                <div class="htContainer">
+                    <h2>lorem lorem</h2>
+                    <p>Rating rating</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, molestiae culpa. Temporibus illo
+                        placeat at a mollitia quod voluptatibus architecto. Velit, nihil consequatur facilis perferendis
+                        voluptatibus autem corporis modi recusandae!</p>
+                    <button><a href="./recipe.html?id=4">See recipe</a></button>
+                </div>
+            </li>
+            <li data-accName="Item 4" class="heroContainer">
+                <div class="hiContainer">
+                    <img src="https://cdn.dummyjson.com/recipe-images/4.webp" alt="HeroPizza">
+                </div>
+                <div class="htContainer">
+                    <h2>lorem lorem</h2>
+                    <p>Rating rating</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, molestiae culpa. Temporibus illo
+                        placeat at a mollitia quod voluptatibus architecto. Velit, nihil consequatur facilis perferendis
+                        voluptatibus autem corporis modi recusandae!</p>
+                    <button><a href="./recipe.html?id=4">See recipe</a></button>
+                </div>
+            </li>
+        </ul>
+        <!-- <div id="hero">
             <div id="hero1" class="heroContainer">
                 <div class="hiContainer">
                     <img src="https://cdn.dummyjson.com/recipe-images/4.webp" alt="HeroPizza">
                 </div>
-                <div>
+                <div class="htContainer">
                     <h2>lorem lorem</h2>
                     <p>Rating rating</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, molestiae culpa. Temporibus illo
@@ -69,17 +125,65 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <div id="mtContainer">
+            <div class="mt"><a href="./recipeList.html?meal-type=dinner&skip=0"><img src="./icons/dinnerIcon.svg"
+                        alt="dinner shortcut">
 
-            <a href="./recipeList.html?meal-type=dinner&skip=0" class="mt">Dinner</a>
-            <a href="./recipeList.html?meal-type=lunch&skip=0" class="mt">Lunch</a>
-            <a href="./recipeList.html?meal-type=breakfast&skip=0" class="mt">Breakfast</a>
-            <a href="./recipeList.html?meal-type=Snack&skip=0" class="mt">Snack</a>
-            <a href="./recipeList.html?meal-type=beverage&skip=0" class="mt">Beverage</a>
-            <a href="./recipeList.html?meal-type=dessert&skip=0" class="mt">Dessert</a>
+                </a>
+                <p>dinner</p>
+            </div>
+            <div class="mt"><a href="./recipeList.html?meal-type=lunch&skip=0"><img src="./icons/lunchIcon.svg"
+                        alt="lunch shortcut">
+
+                </a>
+                <p>lunch</p>
+            </div>
+            <div class="mt"><a href="./recipeList.html?meal-type=breakfast&skip=0"><img src="./icons/breakfastIcon.svg"
+                        alt="breakfast shortcut">
+
+                </a>
+                <p>breakfast</p>
+            </div>
+            <div class="mt"><a href="./recipeList.html?meal-type=Snack&skip=0"><img src="./icons/snackIcon.svg"
+                        alt="snack shortcut">
+
+                </a>
+                <p>snacks</p>
+            </div>
+            <div class="mt">
+                <a href="./recipeList.html?meal-type=beverage&skip=0"><img src="./icons/beverageIcon.svg"
+                        alt="beverages shortcut">
+
+                </a>
+                <p>beverage</p>
+            </div>
+            <div class="mt">
+                <a href="./recipeList.html?meal-type=dessert&skip=0"><img src="./icons/dessertIcon.svg"
+                        alt="dessert shortcut">
+
+                </a>
+                <p>Dessert</p>
+            </div>
+
 
         </div>
+        <button id="allBtn"><a href="./recipeList.html">All Recipes</a></button>
+        <section id="aboutContainer">
+            <img src="./images/thisIsUs.webp" alt="Picture of the group">
+            <div id="aboutText">
+                <h1>About Yumsty</h1>
+                <p>Hi! We are Yumsty.
+                    Our greatest joy is making healthy and tasty food, easy and accessible for anyone, whatever their
+                    experience level in the
+                    kitchen may be.
+                    <br>
+                    <br>
+                    Do you have a recipe you would like send to us?
+                </p>
+                <button id="aboutButton"><a href="./contact.html">Write in!</a></button>
+            </div>
+        </section>
 
     </main>
 
