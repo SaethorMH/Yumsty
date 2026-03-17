@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/contact.css">
     <title>Yumsty - Contact</title>
 </head>
 
@@ -26,6 +28,118 @@
             </button>
         </nav>
     </header>
+    <main>
+        <div class="grid_1_1">
+            <div>
+                <h1>Send in your recipe!</h1>
+                <div class="grid_1_1">
+
+
+                    <form class="webform">
+                        <div class="venstre">
+                            <fieldset>
+                                <label for="dishname">Name of dish</label>
+                                <input class="text" type="text" name="dish" id="dishname" required>
+                            </fieldset>
+
+                            <fieldset>
+                                <label for="ingredients">Ingredients</label>
+                                <textarea name="text" id="ingredients" rows="6" cols="40" required></textarea>
+                            </fieldset>
+
+                            <fieldset>
+                                <label for="instructions">Instructions</label>
+                                <textarea name="text" id="instructions" rows="6" cols="40" required></textarea>
+                            </fieldset>
+                        </div>
+                    </form>
+                    <form class="webform">
+                        <div class="hoejre">
+                            <fieldset>
+                                <label for="tags">Tags</label>
+                                <textarea name="text" id="tags" rows="4" cols="20" required></textarea>
+                            </fieldset>
+
+                            <fieldset>
+                                <label>Mealtype</label>
+                                <div>
+                                    <label for="breakfast">
+                                        <input type="checkbox" name="mealtype" id="breakfast"
+                                            value="Breakfast">Breakfast</label>
+                                </div>
+                                <div>
+                                    <label for="lunch">
+                                        <input type="checkbox" name="mealtype" id="lunch" value="lunch">Lunch</label>
+                                </div>
+                                <div>
+                                    <label for="dinner">
+                                        <input type="checkbox" name="mealtype" id="dinner" value="dinner">Dinner</label>
+                                </div>
+                                <div>
+                                    <label for="appetizer_sidedish">
+                                        <input type="checkbox" name="mealtype" id="appetizer_sidedish"
+                                            value="appetizer_sidedish">Appetizer & Side dish</label>
+                                </div>
+                                <div>
+                                    <label for="beverage">
+                                        <input type="checkbox" name="mealtype" id="beverage"
+                                            value="beverage">Beverage</label>
+                                </div>
+                                <div>
+                                    <label for="dessert_snack">
+                                        <input type="checkbox" name="mealtype" id="dessert_snack"
+                                            value="dessert_snack">Dessert
+                                        &
+                                        Snack</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </form>
+                    <form class="webform">
+                        <div class="venstre">
+                            <fieldset>
+                                <label for="name">Name</label>
+                                <input class="text" type="text" name="name" id="name" required>
+                            </fieldset>
+
+                            <fieldset>
+                                <label for="email">Email</label>
+                                <input class="text" type="email" name="email" id="email" required>
+                            </fieldset>
+
+                            <div class="submit_btn">
+                                <button id="send" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="newsletter">
+                <h2>Sign up for newsletter!</h2>
+                <form id="webform_newsletter">
+                    <fieldset>
+                        <label for="name">Name</label>
+                        <input class="text" type="text" name="name" id="name" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="email">Email</label>
+                        <input class="text" type="email" name="email" id="email" required>
+                    </fieldset>
+
+                    <div class="submit">
+                        <button id="send" type="submit">Submit</button>
+                    </div>
+                </form>
+
+                <h2 class="streg">Contact information</h2>
+                <p>E-mail: yumsty@gmail.com </p>
+                <p>Tlf: 14508890</p>
+            </div>
+        </div>
+    </main>
     <script src="./js/menu.js"></script>
 </body>
 
