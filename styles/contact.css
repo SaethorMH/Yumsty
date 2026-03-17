@@ -1,0 +1,125 @@
+label {
+  display: block;
+  padding-bottom: 5px;
+}
+
+fieldset {
+  border: none;
+  padding: 7px 0;
+}
+
+.webform {
+  margin: 0 50px;
+}
+
+h1 {
+  margin: 60px 30px;
+}
+
+input {
+  border: 0.5px solid;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.text {
+  width: 320px;
+}
+
+textarea {
+  border: 0.5px solid;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.webform button,
+#webform_newsletter button {
+  background-color: var(--primary);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px gray;
+  margin: 20px 0;
+}
+
+.webform button {
+  margin: 50px 0;
+}
+
+.webform button:hover,
+#webform_newsletter button:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.newsletter {
+  background-color: var(--tertiary);
+  padding: 100px 50px;
+}
+.newsletter h2 {
+  padding-bottom: 20px;
+}
+#webform_newsletter button {
+  margin-bottom: 70px;
+}
+
+.streg {
+  border-top: 1px solid;
+  padding-top: 50px;
+}
+.newsletter p {
+  padding-bottom: 5px;
+}
+
+.error-message {
+  display: none;
+}
+
+/* Tilføj rød kant omkring input-feltet, hvis det er ugyldigt */
+/* fieldset:has(:user-invalid) input {
+  outline: 3px solid #f005;
+  border-color: darkred;
+} */
+
+/********* Desktop *********/
+@media (min-width: 800px) {
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px;
+    gap: 10px;
+  }
+
+  .newsletter {
+    margin: 100px;
+    padding: 150px 50px;
+  }
+
+  .hoejre {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-top: 80px;
+  }
+
+  .venstre {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .submit_btn {
+    place-self: center end;
+    margin-right: -80px;
+  }
+
+  .submit {
+    place-self: center;
+  }
+  h1 {
+    margin-left: 75px;
+  }
+}
