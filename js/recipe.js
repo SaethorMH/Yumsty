@@ -20,7 +20,7 @@ function show(data) {
   document.title = "Yumsty - " + data.name;
   rName.innerHTML = data.name;
   rating.innerHTML = data.rating + " (" + data.reviewCount + " reviews)";
-  imgContainer.innerHTML = `<img src="${data.image}" alt="Image of ${data.name}">`;
+  imgContainer.innerHTML = `<img id="recipeImg" src="${data.image}" alt="Image of ${data.name}">`;
 
   data.instructions.forEach((inst) => {
     instructions.innerHTML += `
@@ -30,10 +30,10 @@ function show(data) {
   let i = 0;
   data.ingredients.forEach((ing) => {
     ingredients.innerHTML += `
-    
+    <div id=ing_inline>
     <input type="checkbox" id="ing${i}">
     <label for="ing${i}" class="ingredient">${ing}</label>
-    
+    </div>
     `;
     i++;
   });
