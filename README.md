@@ -8,26 +8,47 @@ I dette projekt har vi lavet et cookbook-website, som bruger indhold fra udlever
 
 ---
 ### Links
-*GitHub repository: https://github.com/SaethorMH/Yumsty
-*GitHub Pages: 
-*Figma: https://www.figma.com/design/VUoEL5qofw6q9y680mQons/Team-56?node-id=280-1049&t=H1qOEWV1cLK5BmR8-1
-*Trello: https://trello.com/b/sL2jNAQa/tema-8-gruppe-56 
-
+- GitHub repository: https://github.com/SaethorMH/Yumsty
+- GitHub Pages: 
+- Figma: https://www.figma.com/design/VUoEL5qofw6q9y680mQons/Team-56?node-id=280-1049&t=H1qOEWV1cLK5BmR8-1
+- Trello: https://trello.com/b/sL2jNAQa/tema-8-gruppe-56
+  
 ---
 
 ## Projektstruktur
-
+```
+project/
+├── index.html
+├── recipelist.html
+├── discover.html
+├── contact.html
+├── recipe.html
+├── css/
+│   └── global.css
+│   ├── index.css
+│   ├── discover.css
+│   ├── recipeList.css
+│   └── recipe.css
+├── js/
+│   ├── index.js
+│   ├── recipelist.js
+│   ├── discover.js
+│   ├── recipe.js
+│   └── contact.js
+└── README.md
+```
 ---
 
 ## Filbeskrivelser
 
-  *index.html – forsiden
-  *recipeList.html – viser en liste med data fra API'et
-  *discover.html – viser lister med forskelilge kategorier fra API'et
-  *recipe.html - viser individuelle id'er fra API'et
-  *contact.html – indeholder formular
-  *style.css – styling og layout
-  *JavaScript-filer – styrer det dynamiske indhold på de forskellige sider
+  * index.html – forsiden
+  * recipeList.html – viser en liste med data fra API'et
+  * discover.html – viser lister med forskelilge kategorier fra API'et
+  * recipe.html - viser individuelle id'er fra API'et
+  * contact.html – indeholder formular
+  * CSS-filer ─ styling og layout
+  
+  * JavaScript-filer – styrer det dynamiske indhold på de forskellige sider
 
   ---
   
@@ -49,6 +70,32 @@ Henter data fra DummyJSON API'et og viser individuelle id'er for den specifikke 
 
 ### contact.js
 Modtager data som brugeren indtaster, som at tilmelde sig til nyhedsbrevet og indsende en opskrift.
+
+---
+## Hvordan koden fungere
+Vi har opdelt JavaScript, så hver side har sin egen fil.
+
+### index.js
+Bruges på forsiden. Her bliver indhold vist dynamisk, fx links eller kategorier.
+
+### recipelist.js
+Henter data fra Rest API'et og viser en liste med opskrifter på siden.
+
+Flow:
+
+- Siden loader
+- JavaScript bliver læst
+- Data hentes fra API
+- Data bliver gennemgået
+- HTML bliver indsat i DOM'en
+- Brugeren kan klikke på en opskrift
+- recipedetails.js
+- Bruges til detaljesiden. Den læser et id fra URL'en og henter derefter den rigtige opskrift fra Rest API'et.
+
+conect.js
+Styrer formularen og validering af inputfelter.
+
+Denne fil bruges til at sikre, at brugeren udfylder formularen korrekt. Det gør formularen mere brugervenlig og mindsker fejl.
 
 ---
 
@@ -131,19 +178,20 @@ Modtager data som brugeren indtaster, som at tilmelde sig til nyhedsbrevet og in
 *
 *
 
+---
 
 ## Formular og validering
 
 ## Navngivning
 
-## Eksempler på variabler
+### Eksempler på variabler
 ```
 const rName
 const rating
 const instructions
 const mealTypeBox
 ```
-## Eksempler på funktioner
+### Eksempler på funktioner
 ```
 makeButtons()
 pageCount()
@@ -155,11 +203,11 @@ showRecipes()
 ## Branches
 
 ### Workflow
-+Lave en branch med et beskrivende feature-navn eller med eget navn
-+Kode en feature
-+Committe ændringer
-+Pushe til GitHub
-+Merge til main når det virkede
+1. Lave en branch med et beskrivende feature-navn eller med eget navn
+2. Kode en feature
+3. Committe ændringer
+4. Pushe til GitHub
+5. Merge til main når det virkede
 
 ---
 
