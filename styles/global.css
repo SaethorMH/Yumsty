@@ -48,6 +48,7 @@ header {
 }
 nav {
   display: flex;
+  margin-right: 20px;
 }
 button {
   background-color: var(--primary);
@@ -66,17 +67,16 @@ button:hover {
   color: var(--bgColor);
 }
 .menu a {
-  background-color: var(--primary);
   text-decoration: none;
   color: var(--black);
   font-family: GrenetteSemi;
   font-size: 2rem;
   padding: 1rem;
-  transition: 0.1s;
+  transition: 0.1s ease;
 }
 .menu a:hover {
-  background-color: var(--secondary);
-  color: var(--bgColor);
+  color: var(--orange);
+  transform: scale(1.1);
 }
 
 * {
