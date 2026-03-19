@@ -2,51 +2,108 @@
 
 ---
 
-##Om Projekt
+## Om Projekt
 
 I dette projekt har vi lavet et cookbook-website, som bruger indhold fra udleveret DummyJSON API. Vi bruger ligeledes HTML, CSS og javascript i opgaveløsningen.
 
 ---
+### Links
+- GitHub repository: https://github.com/SaethorMH/Yumsty
+- GitHub Pages: 
+- Figma: https://www.figma.com/design/VUoEL5qofw6q9y680mQons/Team-56?node-id=280-1049&t=H1qOEWV1cLK5BmR8-1
+- Trello: https://trello.com/b/sL2jNAQa/tema-8-gruppe-56
+  
+---
 
-##Projektstruktur
+## Projektstruktur
+```
+project/
+├── index.html
+├── recipelist.html
+├── discover.html
+├── contact.html
+├── recipe.html
+├── css/
+│   └── global.css
+│   ├── index.css
+│   ├── discover.css
+│   ├── recipeList.css
+│   └── recipe.css
+├── js/
+│   ├── index.js
+│   ├── recipelist.js
+│   ├── discover.js
+│   ├── recipe.js
+│   └── contact.js
+└── README.md
+```
+---
 
-###Filbeskrivelser
+## Filbeskrivelser
 
-  *index.html – forsiden
-  *recipeList.html – viser en liste med data fra API'et
-  *discover.html – viser lister med forskelilge kategorier fra API'et
-  *recipe.html - viser individuelle id'er fra API'et
-  *contact.html – indeholder formular
-  *style.css – styling og layout
-  *JavaScript-filer – styrer det dynamiske indhold på de forskellige sider
+  * index.html – forsiden
+  * recipeList.html – viser en liste med data fra API'et
+  * discover.html – viser lister med forskelilge kategorier fra API'et
+  * recipe.html - viser individuelle id'er fra API'et
+  * contact.html – indeholder formular
+  * CSS-filer ─ styling og layout
+  
+  * JavaScript-filer – styrer det dynamiske indhold på de forskellige sider
 
   ---
   
-##Kode funktioner
+## Kode funktioner
 
 Vi har opdelt JavaScript, så hver side har sin egen fil.
 
-###index.js
+### index.js
+Her vises indholdet dynamisk, med links direkste til specifikke opskrifter eller til kategorier.
 
-
-###recipeList.js
+### recipeList.js
 Henter data fra DummyJSON API'et og viser opskrifterne på en liste.
 
-###discover.js
+### discover.js
 Henter data fra DummyJSON API'et og viser flere lister med forskellige arrangeringer af lister fra API'et.
 
-###recipe.js
+### recipe.js
 Henter data fra DummyJSON API'et og viser individuelle id'er for den specifikke opskrift brugeren klikker på.
 
-###contact.js
+### contact.js
 Modtager data som brugeren indtaster, som at tilmelde sig til nyhedsbrevet og indsende en opskrift.
 
+---
+## Hvordan koden fungere
+Vi har opdelt JavaScript, så hver side har sin egen fil.
 
-##Data og JSON-struktur
+### index.js
+Bruges på forsiden. Her bliver indhold vist dynamisk, fx links eller kategorier.
 
-API'et er i JSON-format.
+### recipelist.js
+Henter data fra Rest API'et og viser en liste med opskrifter på siden.
 
-Eks.:
+Flow:
+
+- Siden loader
+- JavaScript bliver læst
+- Data hentes fra API
+- Data bliver gennemgået
+- HTML bliver indsat i DOM'en
+- Brugeren kan klikke på en opskrift
+- recipedetails.js
+- Bruges til detaljesiden. Den læser et id fra URL'en og henter derefter den rigtige opskrift fra Rest API'et.
+
+conect.js
+Styrer formularen og validering af inputfelter.
+
+Denne fil bruges til at sikre, at brugeren udfylder formularen korrekt. Det gør formularen mere brugervenlig og mindsker fejl.
+
+---
+
+# Data og JSON-struktur
+
+### API'et er i JSON-format.
+
+### Eks.:
 ```
 {
   "products": [
@@ -110,35 +167,57 @@ Eks.:
       ],
       "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
     }
-
-
-###Felter vi bruger
-
-
-##Formular og validering
-
-
-##Git og branches
-
-
-###Workflow
-+Lave en branch med feature-navn og eget navn til sidst
-+Kode en feature
-+Committe ændringer
-+Pushe til GitHub
-+Merge til main når det virkede
-
-
-##Bæredygtighed
-
-
-##Udfordringer undervejs
-
-
-##Mulige forbedringer
+```
 
 ---
-### Gruppemedlemmer:
+
+# Felter vi bruger
+* id - Dette bruges til at føre brugeren videre til den specifikke opskrift.
+* 
+*
+*
+*
+
+---
+
+## Formular og validering
+
+## Navngivning
+
+### Eksempler på variabler
+```
+const rName
+const rating
+const instructions
+const mealTypeBox
+```
+### Eksempler på funktioner
+```
+makeButtons()
+pageCount()
+showRecipes()
+```
+
+---
+
+## Branches
+
+### Workflow
+1. Lave en branch med et beskrivende feature-navn eller med eget navn
+2. Kode en feature
+3. Committe ændringer
+4. Pushe til GitHub
+5. Merge til main når det virkede
+
+---
+
+## Udfordringer undervejs
+
+
+## Mulige forbedringer
+
+---
+## Gruppemedlemmer:
 - Nicolai
 - Sofie
 - Sæthor
