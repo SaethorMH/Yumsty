@@ -31,7 +31,9 @@ body {
   background-image: linear-gradient(var(--bgColor), var(--tertiary));
   color: var(--black);
 }
-
+main {
+  margin: auto;
+}
 h1 {
   font-family: GrenetteBold;
   text-transform: capitalize;
