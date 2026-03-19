@@ -71,7 +71,27 @@
                 <p>Dessert</p>
             </div>
         </div>
-        <h1 id="mealType"></h1>
+        <div id="hAndS">
+            <h1 id="mealType"></h1>
+            <div id="sContainer">
+                <label for="sortSelect">Sort by:</label>
+                <select name="sort" id="sortSelect">
+                    <option value="">--x--</option>
+                    <option value="&sortBy=rating&order=desc">Rating - High to low</option>
+                    <option value="&sortBy=rating&order=asc">Rating - Low to high</option>
+                    <option value="&sortBy=name&order=asc">Name - A to Z</option>
+                    <option value="&sortBy=name&order=desc">Name - Z to A</option>
+
+                    <!-- <option value="16">16</option>
+                    <option value="32">32</option> -->
+
+                </select>
+            </div>
+
+        </div>
+
+
+
         <div id="rContainer"></div>
         <div id="buttonContainer">
 

@@ -3,9 +3,17 @@ const params = new URLSearchParams(window.location.search);
 const rContainer = document.querySelector("#rContainer");
 const mealTypeBox = document.querySelector("#mealType");
 const bContainer = document.querySelector("#buttonContainer");
+const sorter = document.querySelector("#sortSelect");
 let skipNr = params.get("skip");
+if (skipNr == null || skipNr == "") {
+  skipNr = 0;
+}
 let limit = params.get("limit");
 let total;
+
+let allRecipes = [];
+let sortedRecipes = [];
+let sort = "";
 
 let mealtype = params.get("meal-type");
 mealTypeBox.innerHTML = mealtype;
@@ -17,9 +25,11 @@ if (limit == "" || limit == null) {
 }
 
 if (mealtype != null && mealtype != "") {
-  fetch(listURL + "/meal-type/" + mealtype + "?limit=" + limit + "&skip=" + skipNr).then((res) =>
+  fetch(listURL + "/meal-type/" + mealtype + "?limit=" + limit + "&skip=" + skipNr + sort).then((res) =>
     res.json().then((data) => {
       // console.log(data);
+      allRecipes = data;
+      console.log(allRecipes);
       mealTypeBox.innerHTML = mealtype;
       document.title = "Yumsty - " + mealtype;
       total = data.total;
@@ -30,7 +40,7 @@ if (mealtype != null && mealtype != "") {
     }),
   );
 } else if (skipNr != null && skipNr != "") {
-  fetch(listURL + "?limit=" + limit + "&skip=" + skipNr).then((res) =>
+  fetch(listURL + "?limit=" + limit + "&skip=" + skipNr + sort).then((res) =>
     res.json().then((data) => {
       // console.log(data);
       mealTypeBox.innerHTML = "All Recipes";
@@ -43,7 +53,7 @@ if (mealtype != null && mealtype != "") {
     }),
   );
 } else {
-  fetch(listURL + "?limit=" + limit + "&skip=0").then((res) =>
+  fetch(listURL + "?limit=" + limit + "&skip=0" + sort).then((res) =>
     res.json().then((data) => {
       // console.log(data);
       mealTypeBox.innerHTML = "All Recipes";
@@ -90,4 +100,16 @@ function makeButtons() {
 
 function pageCount() {
   document.querySelector("#pageCounter").innerHTML = `Page ${skipNr / limit + 1} of ${Math.ceil(total / limit)}`;
+}
+
+sorter.addEventListener("change", changeSort);
+
+function changeSort() {
+  const sortValue = sorter.value; // e.g. "&sortBy=rating&order=asc"
+  const base = mealtype ? `${listURL}meal-type/${mealtype}?limit=${limit}&skip=${skipNr}${sortValue}` : `${listURL}?limit=${limit}&skip=${skipNr}${sortValue}`;
+
+  rContainer.innerHTML = ""; // clear before re-render
+  fetch(base)
+    .then((res) => res.json())
+    .then((data) => showRecipes(data.recipes));
 }
