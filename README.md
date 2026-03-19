@@ -9,7 +9,7 @@ I dette projekt har vi lavet et cookbook-website, som bruger indhold fra udlever
 ---
 ### Links
 - GitHub repository: https://github.com/SaethorMH/Yumsty
-- GitHub Pages: 
+- GitHub Pages: https://saethormh.github.io/Yumsty/index.html
 - Figma: https://www.figma.com/design/VUoEL5qofw6q9y680mQons/Team-56?node-id=280-1049&t=H1qOEWV1cLK5BmR8-1
 - Trello: https://trello.com/b/sL2jNAQa/tema-8-gruppe-56
   
@@ -47,10 +47,9 @@ project/
   * recipe.html - viser individuelle id'er fra API'et
   * contact.html – indeholder formular
   * CSS-filer ─ styling og layout
-  
   * JavaScript-filer – styrer det dynamiske indhold på de forskellige sider
 
-  ---
+---
   
 ## Kode funktioner
 
@@ -72,6 +71,7 @@ Henter data fra DummyJSON API'et og viser individuelle id'er for den specifikke 
 Modtager data som brugeren indtaster, som at tilmelde sig til nyhedsbrevet og indsende en opskrift.
 
 ---
+
 ## Hvordan koden fungere
 Vi har opdelt JavaScript, så hver side har sin egen fil.
 
@@ -92,10 +92,8 @@ Flow:
 - recipedetails.js
 - Bruges til detaljesiden. Den læser et id fra URL'en og henter derefter den rigtige opskrift fra Rest API'et.
 
-conect.js
-Styrer formularen og validering af inputfelter.
-
-Denne fil bruges til at sikre, at brugeren udfylder formularen korrekt. Det gør formularen mere brugervenlig og mindsker fejl.
+menu.js
+Indsætter burgermenu på alle siderne
 
 ---
 
@@ -172,15 +170,25 @@ Denne fil bruges til at sikre, at brugeren udfylder formularen korrekt. Det gør
 ---
 
 # Felter vi bruger
+
 * id - Dette bruges til at føre brugeren videre til den specifikke opskrift.
-* 
-*
-*
-*
+* name - navn på opskrift
+* ingredients - ingredienser til opskriften
+* instructions - instruktioner til opskriften
+* prepTimeMinutes - prep tid \
+* cookTimeMinutes - cook tid└ Ligges sammen for en samlet madlavningstid.
 
 ---
 
 ## Formular og validering
+
+HTML-validering:
+
+required – feltet skal udfyldes
+type="email" – validerer email-format
+type="submit" - sender informationen når der trykkes på knappen
+
+---
 
 ## Navngivning
 
@@ -211,10 +219,11 @@ showRecipes()
 
 ---
 
-## Udfordringer undervejs
-
-
 ## Mulige forbedringer
+
+- gøre trasitions i hero karrusel på forsiden mere smooth
+- gøre det mere synligt visuelt at man kan scrolle i karrusellerne på discover-siden
+- skalerbarheden mellem desk og mobil
 
 ---
 ## Gruppemedlemmer:
